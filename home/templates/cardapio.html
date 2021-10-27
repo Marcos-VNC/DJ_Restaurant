@@ -1,0 +1,46 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block 'titulo' %}Cardapio{% endblock %}
+
+
+{% block 'content' %}
+<section class="home" style="background-image: url({% static 'images/pizza.jpg' %});">
+</section>
+<div class="container">
+    <br>
+<div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for lanche in dados %}
+                <div class="col">
+                    <div class="shadow-sm" style="background-size: cover;">
+                        <img src="{{lanche.imagem.url}}" class="bd-placeholder-img card-img-top" alt="..." width="100%"
+                             height="350">
+                        <div class="card-body">
+                            <h5 class="card-text fs-1">{{lanche.nome}}</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!--                                <div class="btn-group">-->
+                                <!--                                    <button type="button" class="btn btn-sm btn-outline-danger">-</button>-->
+                                <!--                                    <button type="button" class="btn btn-sm btn-outline-success   ">+</button>-->
+                                <!--                                </div>-->
+                                <button class="btn btn-outline-success btn-lg fs-3" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Comprar
+                                </button>
+                                <h2 class="text-muted fs-1">R${{lanche.valor}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+    <br>
+</div>
+{% include 'carousel.html' %}
+<footer class="fs-1 mt-4 text-muted border-top" style="text-align: center !important;">
+  © 2021
+</footer>
+{% endblock %}

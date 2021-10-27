@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap5 %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block 'titulo' %}  {% endblock %}</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <style>
+        html {
+          overflow:   scroll;
+
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
+  </style>
+</head>
+<body>
+{% include 'navbar.html' %}
+
+{% block 'content' %}
+
+{% endblock %}
+
+</body>
+<script>
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+</html>

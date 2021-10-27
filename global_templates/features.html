@@ -1,0 +1,71 @@
+{% load static %}
+<div class="container px-4 py-5" id="custom-cards">
+    <h1 class="text-danger fs-1 border-bottom">Melhores pizzas e lanches da região!</h1>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col" style="">
+        <div class="card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url({% static 'images/fea_img01.jpg' %}); background-size: cover;
+    background-position: center; ">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Temos pizzas</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://img.icons8.com/emoji/48/000000/pizza-emoji.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <strong><small class="fs-3">São Paulo</small></strong>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <strong><small class="fs-3">3d</small></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url({% static 'images/fea_img02.jpg' %}); background-size: cover;
+    background-position: center;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Doces!</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-chocolate-bad-habits-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <strong><small class="fs-3">São Paulo</small></strong>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <strong><small class="fs-3">4d</small></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url({% static 'images/fea_img03.jpg' %}); background-size: cover;
+    background-position: center;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Melhor para sua refeição!</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://img.icons8.com/cotton/64/000000/cola.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <strong><small class="fs-3">São Paulo</small></strong>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <strong><small class="fs-3">5d</small></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

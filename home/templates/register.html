@@ -1,0 +1,47 @@
+{% extends 'default.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% block 'titulo' %}Login{% endblock %}
+
+{% block 'content' %}
+<section class="home" style="background-image: url({% static 'images/img01.jpg' %});">
+</section>
+<br>
+<br>
+<div class="container fs-1">
+    <div class="container">{% bootstrap_messages %}</div>
+    <div class="container border border-warning border-1 rounded-3 ">
+        <form style="padding: 5rem;" method="post" action="{% url 'register' %}">
+          {% csrf_token %}
+            <div class="input-group fs-1">
+              <span class="input-group-text fs-1">Nome e Sobrenome</span>
+              <input type="text" aria-label="First name" class="form-control fs-1" name="nome">
+              <input type="text" aria-label="Last name" class="form-control fs-1" name="sobrenome">
+            </div>
+            <br>
+            <div class="input-group mb-3 fs-1">
+              <span class="input-group-text fs-2" id="basic-addon1">@</span>
+              <input type="text" class="form-control fs-1" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" name="usuario">
+            </div>
+            <br>
+            <div class="input-group mb-3 fs-1">
+              <input type="text" class="form-control fs-1" placeholder="Email" name="email">
+              <span class="input-group-text fs-3" >@example.com</span>
+            </div>
+            <br>
+            <div class="input-group mb-3 fs-1">
+              <input type="password" class="form-control fs-1" placeholder="senha"  name="senha">
+              <span class="input-group-text fs-2">@</span>
+              <input type="password" class="form-control fs-1" placeholder="confirmar senha" name="senha2">
+            </div>
+            <br>
+          <button type="submit" class="btn btn-outline-dark  fs-1 opacity-75">Sign Up</button>
+    </form>
+    </div>
+</div>
+<br>
+<br>
+<footer class="fs-1 mt-4 text-muted border-top" style="text-align: center !important;">
+  © 2021
+</footer>
+{% endblock %}

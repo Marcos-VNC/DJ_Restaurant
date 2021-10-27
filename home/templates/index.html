@@ -1,0 +1,18 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block 'titulo' %}Home{% endblock %}
+
+
+{% block 'content' %}
+<section class="home        " style="background-image: url({% static 'images/hamburguer.jpg' %});">
+</section>
+<div class="container">
+
+    {% include 'features.html' %}
+    {% include 'content.html' %}
+</div>
+<footer class="fs-1 mt-4 text-muted border-top" style="text-align: center !important;">
+  © 2021
+</footer>
+{% endblock %}
