@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
+    'rest_framework',
+    'django_filters',
     'home',
 ]
 
@@ -145,3 +147,13 @@ MESSAGE_TAGS = {
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+    #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly’,
+    'rest_framework.permissions.AllowAny',
+    # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+
+    ]
+}

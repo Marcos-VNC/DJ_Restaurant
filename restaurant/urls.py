@@ -27,5 +27,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('home.urls')),
     path('admin/', admin.site.urls),
+    path('auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 if not settings.DEBUG: urlpatterns += [ url(r'^uploads/(?P<path>.)$', serve,{'document_root': settings.MEDIA_ROOT}), url(r'^static/(?P<path>.)$', serve,{'document_root': settings.STATIC_ROOT}), ]
